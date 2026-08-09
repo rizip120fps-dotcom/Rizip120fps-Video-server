@@ -200,7 +200,7 @@ function shiftVideoStco(trakBuf, shift) {
           const ct = typeAt(c4, 4), step = ct === 'co64' ? 8 : 4;
           const ch = boxHeader(c4);
           const n = readU32At(c4, ch + 4);
-          const payload = c4.slice(ch);
+          const payload = Buffer.from(c4.slice(ch));
           for (let i = 0; i < n; i++) {
             const off = 8 + i * step;
             const val = step === 8 ? readU64(c4, ch + off) : readU32At(c4, ch + off);
