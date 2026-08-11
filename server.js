@@ -17,6 +17,7 @@ app.use(cors({
   origin: [
     'https://rizip120fps.com',
     'https://www.rizip120fps.com',
+    'https://rizip120fps.vercel.app',
     'http://localhost:5173',
     'http://localhost:3000',
   ],
